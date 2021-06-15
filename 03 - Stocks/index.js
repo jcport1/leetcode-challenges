@@ -1,5 +1,7 @@
 // 121. Best Time to Buy and Sell Stock
 // LeetCode: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+// https://medium.com/coding-at-dawn/the-fastest-way-to-find-minimum-and-maximum-values-in-an-array-in-javascript-2511115f8621
+//https://www.youtube.com/watch?v=9ZMMNyHy3z4
 
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
 // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
