@@ -8,7 +8,7 @@ var reverse = function(x) {
     let results = []
     //make number a str so we can loop through it
     const str = x.toString()
-    console.log(str)
+    
     //loop through string
     let neg = false;
 
@@ -26,19 +26,22 @@ var reverse = function(x) {
     }
         //return reversed numbers by
         //converting array back into a string and then into a number
-        console.log(parseInt(results.join("")))
-        console.log(neg)
+       
+        let result = parseInt(results.join(""))
 
-        if (neg === true) {
+        if (result > 2 ** 31 - 1) {
+            
+            return 0;
 
+        } else if (neg === true) {
             console.log("I'm a negative number")
             let reversed = parseInt("-" + results.join(""))
             console.log(reversed)
             return reversed
-
+            
         } else {
             console.log("I'm a positive number")
-            return parseInt(results.join(""))
+            return result;
         }
     
 };
@@ -69,4 +72,4 @@ var reverse = function(x) {
     
 // };
 
-reverse(789)
+reverse(1534236469)
