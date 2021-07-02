@@ -47,7 +47,50 @@ function anagram(str1, str2) {
 
 }
 
-str1 = "qwerty"
-str2 = "qeywrt"
+// str1 = "qwerty"
+// str2 = "qeywrt"
 
-anagram(str1, str2)
+// anagram(str1, str2)
+
+//Other solution
+
+function validAnagram(str1, str2){
+    //check if length is the same in both strings
+
+    if(str1.length !== str2.length){
+        return false;
+    }
+
+    //create frequency counter 
+    let lookup = {};
+
+    //loop over first string 
+
+    for(let i=0; i < str1.length; i++){
+        //grab letter 
+        let letter = str1[i];
+        //check if key exists in lookup object
+        lookup[letter]? lookup[letter] +=1 : lookup[letter] = 1; 
+    }
+
+    //compare strs w/ for loop
+
+    for(let i=0; i < str2.length; i++){
+        //grab letter from str2
+        let letter = str2[i];
+        //letter is key in lookup object
+        if(!lookup[letter]) {
+            console.log("Anagram: false")
+            return false;
+        } else {
+            lookup[letter] -= 1 ;
+        }
+    }
+    console.log("Anagram: true")
+    return true; 
+}
+
+const str1 = "anagrams"
+const str2 = "anagarms"
+
+validAnagram(str1, str2);
