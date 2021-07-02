@@ -32,11 +32,14 @@ function countUniqueValues(arr){
 
     if (arr.length === 0) return 0;
     //create two pointers
+
+    //pointer 1: i
     let i = 0;
 
     //iterate through array
 
     //for loop for our "scout j" which is checking for unique values
+    //point 2: j
     for (let j = 1; j < arr.length; j++){
 
         //if j is not equal to i than it's a unique value
