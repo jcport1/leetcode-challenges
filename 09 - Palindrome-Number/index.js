@@ -35,3 +35,24 @@ var isPalindrome = function(x) {
 
 
 isPalindrome(1211);
+
+// alternative solution
+
+// function isPalindrome(x){
+
+//     //convert variable into array
+//     const arr = String(x).split('');
+
+//     console.log(arr)
+
+//     //while loop to compare front and back of array
+//     while (arr.length > 1) {
+//         if (arr.shift() !== arr.pop()) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+// isPalindrome(1211);
